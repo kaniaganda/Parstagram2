@@ -11,6 +11,13 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/nav_logo_whiteout" />
+
     <EditText
         android:id="@+id/etDescription"
         android:layout_width="match_parent"
@@ -23,7 +30,8 @@
         android:id="@+id/btnCaptureImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Take Picture" />
+        android:text="Take Picture"
+        android:backgroundTint="@color/light_gray" />
 
     <ImageView
         android:id="@+id/ivPostImage"
@@ -35,7 +43,8 @@
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit" />
+        android:text="Submit"
+        android:backgroundTint="@color/light_gray" />
 
     <!-- adjust to not hard code, set button to bottom -->
     <Button
@@ -43,6 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
-        android:text="Log Out" />
+        android:text="Log Out"
+        android:backgroundTint="@color/light_gray"/>
 
 </LinearLayout>
