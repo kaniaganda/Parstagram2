@@ -33,7 +33,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+One of the challenges I encountered was implementing the progress bar. The progress bar would occur before the event. I am working on the solution to include the progress bar.
 
 ## Open-source libraries used
 
