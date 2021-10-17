@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "MainActivity";
     public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 42;
+    private BottomNavigationView bottomNavigationView;
     private EditText etDescription;
     private Button btnCaptureImage;
     private ImageView ivPostImage;
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        bottomNavigationView = findViewById(R.id.bottomNav);
         etDescription = findViewById(R.id.etDescription);
         btnCaptureImage = findViewById(R.id.btnCaptureImage);
         ivPostImage = findViewById(R.id.ivPostImage);
@@ -52,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         btnLogOut = findViewById(R.id.btnLogOut);
 
 //        queryPosts();
+
+        //bottomNavigationView.setOnNavigationItemReselectedListener(bottomNavMethod);
 
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
             // Start the image capture intent to take photo
             startActivityForResult(intent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
         }
+
     }
 
     @Override
