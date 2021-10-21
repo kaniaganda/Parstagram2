@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/menu" />
+        app:menu="@menu/menu_bottom_navigation" />
 
 
 </RelativeLayout>
