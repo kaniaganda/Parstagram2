@@ -53,6 +53,8 @@ public class ComposeFragment extends Fragment {
     private File photoFile;
     public String photoFileName = "photo.jpg";
 
+    private Button btnLogOut;
+
     public ComposeFragment() {
         // Required empty public constructor
     }
@@ -74,6 +76,7 @@ public class ComposeFragment extends Fragment {
         btnCaptureImage = view.findViewById(R.id.btnCaptureImage);
         ivPostImage = view.findViewById(R.id.ivPostImage);
         btnSubmit = view.findViewById(R.id.btnSubmit);
+        btnLogOut = view.findViewById(R.id.btnLogOut);
 
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,6 +100,16 @@ public class ComposeFragment extends Fragment {
                 ParseUser currentUser = ParseUser.getCurrentUser();
                 savePost(description, currentUser, photoFile);
                 Toast.makeText(getContext(), "Post submitted!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ParseUser.logOut();
+                ParseUser currentUser = ParseUser.getCurrentUser(); // this will now be null
+                Toast.makeText(getContext(), "Log out success!", Toast.LENGTH_SHORT).show();
+                getActivity().finish();
             }
         });
     }
