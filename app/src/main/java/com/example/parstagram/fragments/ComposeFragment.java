@@ -22,6 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.parstagram.MainActivity;
 import com.example.parstagram.Post;
@@ -49,11 +50,10 @@ public class ComposeFragment extends Fragment {
     private Button btnCaptureImage;
     private ImageView ivPostImage;
     private Button btnSubmit;
+    private Button btnLogOut;
 
     private File photoFile;
     public String photoFileName = "photo.jpg";
-
-    private Button btnLogOut;
 
     public ComposeFragment() {
         // Required empty public constructor
