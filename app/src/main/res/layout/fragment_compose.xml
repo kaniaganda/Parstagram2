@@ -48,19 +48,22 @@
         android:text="Submit" />
 
     <!-- adjust to not hard code, set button to bottom -->
+
     <Button
         android:id="@+id/btnLogOut"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/bottomNavigation"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginTop="200dp"
         android:backgroundTint="@color/light_gray"
         android:text="Log Out" />
 
     <FrameLayout
         android:id="@+id/fragment_layout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false" />
 
 </LinearLayout>
